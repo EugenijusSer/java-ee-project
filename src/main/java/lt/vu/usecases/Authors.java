@@ -24,7 +24,7 @@ public class Authors {
     @Transactional
     public String createNewAuthor() {
         authorsDAO.save(newAuthor);
-        return "success";
+        return "index?faces-redirect=true";
     }
 
     private void loadAuthors() {
