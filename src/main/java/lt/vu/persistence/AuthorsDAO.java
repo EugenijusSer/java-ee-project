@@ -16,6 +16,10 @@ public class AuthorsDAO {
         return em.createNamedQuery("Author.findAll", Author.class).getResultList();
     }
 
+    public Author findOne(Integer id) {
+        return em.find(Author.class, id);
+    }
+
     public void save(Author author) {
         this.em.persist(author);
     }
