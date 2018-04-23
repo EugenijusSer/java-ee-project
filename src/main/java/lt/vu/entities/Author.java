@@ -7,6 +7,9 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "AUTHOR")
+@NamedQueries({
+    @NamedQuery(name = "Author.findAll", query = "select a from Author as a")
+})
 public class Author implements Serializable {
 
     public Author() {}
